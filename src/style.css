@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1; /* Indigo-500 */
+  --color-background: #0b1120; /* Slate-950 */
+  --color-backgroundDark: #020617; /* Slate-950 darker */
+  --color-text: #e5e7eb; /* Gray-200 */
+  --color-textLight: #9ca3af; /* Gray-400 */
+  --color-accent: #22d3ee; /* Cyan-400 */
+  --color-card: #111827; /* Gray-900 */
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Adjust scroll padding to account for fixed header */
+html {
+  scroll-padding-top: 80px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+#fixe {
+  position: fixed;
+  width: 100%;
+}
