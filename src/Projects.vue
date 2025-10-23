@@ -105,7 +105,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // Images importées
-import img1 from './assets/project1.jpg';
+// import img1 from './assets/project1.jpg';
 import img2 from './assets/project2.jpg';
 import img3 from './assets/Project4.png';
 import img4 from './assets/project3.jpg';
@@ -116,17 +116,17 @@ const modules = [Navigation, Pagination, Autoplay];
 
 // Projets
 const projects = ref([
-  {
-    title: "Portfolio Personnel",
-    description: "Un portfolio moderne et responsive présentant mes compétences et réalisations avec des animations fluides et un design élégant.",
-    image: img1,
-    category: "Web Design",
-    technologies: [
-      { name: "Vue.js", icon: "vscode-icons:file-type-vue" },
-      { name: "Tailwind", icon: "vscode-icons:file-type-tailwind" },
-      { name: "AOS", icon: "mdi:animation" },
-    ],
-  },
+  // {
+  //   title: "Portfolio Personnel",
+  //   description: "Un portfolio moderne et responsive présentant mes compétences et réalisations avec des animations fluides et un design élégant.",
+  //   image: img1,
+  //   category: "Web Design",
+  //   technologies: [
+  //     { name: "Vue.js", icon: "vscode-icons:file-type-vue" },
+  //     { name: "Tailwind", icon: "vscode-icons:file-type-tailwind" },
+  //     { name: "AOS", icon: "mdi:animation" },
+  //   ],
+  // },
   {
     title: "Application E-commerce",
     description: "Plateforme e-commerce complète avec gestion de panier, paiement sécurisé et interface administrateur intuitive.",
