@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://edson-lawson.vercel.app/sitemap.xml
+
+# Crawl-delay pour les bots respectueux
+Crawl-delay: 1

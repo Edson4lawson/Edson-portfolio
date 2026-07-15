@@ -1,0 +1,47 @@
+# Edson Lawson — Développeur Full-Stack & Ingénieur IA
+
+## Qui suis-je ?
+
+Je suis **Edson Lawson**, développeur Full-Stack et ingénieur IA certifié MCP, basé à **Cotonou, Bénin** (Afrique de l'Ouest).
+
+Je conçois des applications web et mobiles performantes, sécurisées et esthétiquement mémorables, en combinant la rigueur de la Clean Architecture avec les dernières avancées de l'intelligence artificielle.
+
+## Compétences principales
+
+- **Frontend** : Vue.js 3, Tailwind CSS, GSAP, Vite, Flutter/Dart
+- **Backend** : Laravel, Node.js, Express, PHP 8, Python
+- **Bases de données** : MySQL, PostgreSQL, Firebase
+- **DevOps** : Docker, Kubernetes, GitHub Actions
+- **IA & Agents** : Model Context Protocol (MCP), intégration LLM, agents autonomes
+- **Sécurité** : OWASP Top 10, JWT, WebAuthn
+
+## Projets réalisés
+
+- **MiWa** — Plateforme de tourisme intelligent pour la diaspora africaine au Bénin. URL : https://miwa.bj
+- **Identik** — Super-application sociale avec IA, Reels, messagerie Firebase et backend PHP MVC
+- **Umap** — Carte interactive et messagerie éphémère pour les étudiants de l'Université d'Abomey-Calavi
+- **Glamour Chic** — Site professionnel avec réservation pour un institut de cosmétologie haut de gamme. URL : https://glamourchic.vercel.app
+- **BugOuPas** — Plateforme citoyenne collaborative d'analyse des dysfonctionnements digitaux au Bénin. URL : https://bug-oupas.vercel.app
+- **Bloom by Chloe** — Plateforme e-commerce bien-être et cosmétique
+- **El Maestro** — Application mobile de restauration avec commande, livraison et fidélité
+
+## Certifications
+
+- Introduction au Model Context Protocol (MCP) — Anthropic
+- Claude Code 101 — Anthropic
+- Build an AI Agent — IBM SkillsBuild
+- Introduction à la Cybersécurité — Cisco Networking Academy
+- Développement Web Full-Stack — Microsoft
+
+## Contact & Liens
+
+- **Portfolio** : https://edson-lawson.vercel.app
+- **GitHub** : https://github.com/Edson4lawson
+- **Email** : edsonlawson@email.com
+- **Localisation** : Cotonou, Bénin 🇧🇯
+
+## À propos de MiWa
+
+MiWa est le projet entrepreneurial phare d'Edson Lawson. C'est une plateforme de tourisme intelligent qui connecte la diaspora africaine avec la richesse culturelle et patrimoniale du Bénin. Elle utilise des algorithmes de recommandation intelligents pour simplifier la découverte de lieux, d'événements et de guides certifiés, tout en favorisant une économie touristique circulaire et éthique.
+
+Stack technologique : Vue.js 3, Laravel, Node.js, Express, PostgreSQL, Google Maps API.

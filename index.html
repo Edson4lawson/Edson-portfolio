@@ -1,10 +1,151 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-portfolio</title>
+
+    <!-- ══ Primary SEO ══ -->
+    <title>Edson Lawson — Développeur Full-Stack & Fondateur de MiWa | Bénin</title>
+    <meta name="description" content="Edson Lawson, développeur Full-Stack et ingénieur IA basé au Bénin. Expert Laravel, Vue.js, Flutter et agents IA. Fondateur de MiWa, plateforme de tourisme intelligent. Disponible pour des projets web, mobile et IA." />
+    <meta name="keywords" content="Edson Lawson, développeur full-stack Bénin, ingénieur IA Bénin, Vue.js Laravel Flutter, portfolio développeur Bénin, MiWa tourisme Bénin, développeur web Cotonou, freelance développeur Afrique, agent IA, développeur mobile Bénin" />
+    <meta name="author" content="Edson Lawson" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://edson-lawson.vercel.app/" />
+
+    <!-- ══ Langue & Région ══ -->
+    <meta name="language" content="fr" />
+    <meta name="geo.region" content="BJ" />
+    <meta name="geo.placename" content="Cotonou, Bénin" />
+
+    <!-- ══ Open Graph (Facebook, LinkedIn, WhatsApp) ══ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Edson Lawson — Portfolio" />
+    <meta property="og:title" content="Edson Lawson — Développeur Full-Stack & Fondateur de MiWa" />
+    <meta property="og:description" content="Développeur Full-Stack et ingénieur IA basé au Bénin. Expert Laravel, Vue.js, Flutter. Fondateur de MiWa. Réalisations : Identik, Glamour Chic, BugOuPas, Umap et plus." />
+    <meta property="og:url" content="https://edson-lawson.vercel.app/" />
+    <meta property="og:image" content="https://edson-lawson.vercel.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Edson Lawson - Portfolio Développeur Full-Stack" />
+    <meta property="og:locale" content="fr_BJ" />
+
+    <!-- ══ Twitter / X Card ══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Edson Lawson — Développeur Full-Stack & Fondateur de MiWa" />
+    <meta name="twitter:description" content="Développeur Full-Stack et ingénieur IA basé au Bénin. Expert Laravel, Vue.js, Flutter. Fondateur de MiWa." />
+    <meta name="twitter:image" content="https://edson-lawson.vercel.app/og-image.jpg" />
+
+    <!-- ══ Favicon ══ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- ══ Schema.org JSON-LD — Person (pour les IA & moteurs de recherche) ══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Edson Lawson",
+      "alternateName": ["Edson4lawson", "Edson Lawson développeur"],
+      "url": "https://edson-lawson.vercel.app/",
+      "image": "https://edson-lawson.vercel.app/og-image.jpg",
+      "jobTitle": "Développeur Full-Stack & Ingénieur IA",
+      "description": "Développeur Full-Stack et ingénieur IA certifié MCP basé au Bénin. Spécialisé en Laravel, Vue.js, Flutter, Python et agents IA. Fondateur de MiWa, plateforme de tourisme intelligent connectant la diaspora africaine au patrimoine béninois.",
+      "nationality": "Béninois",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cotonou",
+        "addressCountry": "BJ"
+      },
+      "sameAs": [
+        "https://github.com/Edson4lawson",
+        "https://linkedin.com/in/edson-lawson"
+      ],
+      "knowsAbout": [
+        "Développement Web Full-Stack",
+        "Vue.js",
+        "Laravel",
+        "Flutter",
+        "Python",
+        "Intelligence Artificielle",
+        "Agents IA",
+        "Model Context Protocol",
+        "Firebase",
+        "Docker",
+        "MySQL",
+        "Node.js",
+        "Cybersécurité"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Développeur Full-Stack",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Bénin"
+        }
+      },
+      "founder": {
+        "@type": "Organization",
+        "name": "MiWa",
+        "description": "Plateforme de tourisme intelligent connectant la diaspora africaine avec la richesse du patrimoine béninois.",
+        "url": "https://miwa.bj"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Indépendant"
+      }
+    }
+    </script>
+
+    <!-- ══ Schema.org JSON-LD — WebSite (pour la recherche par nom) ══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Edson Lawson — Portfolio",
+      "url": "https://edson-lawson.vercel.app/",
+      "description": "Portfolio officiel d'Edson Lawson, développeur Full-Stack et ingénieur IA basé au Bénin.",
+      "author": {
+        "@type": "Person",
+        "name": "Edson Lawson"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://edson-lawson.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ══ Schema.org JSON-LD — BreadcrumbList ══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://edson-lawson.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projets",
+          "item": "https://edson-lawson.vercel.app/projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CV",
+          "item": "https://edson-lawson.vercel.app/cv"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
     <div id="app"></div>
