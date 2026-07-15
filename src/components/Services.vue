@@ -1,99 +1,121 @@
 <template>
-  <section id="services" class="py-16 bg-[#0a192f] text-white ">
-    <div class="container mx-auto px-4 text-center">
-      <!-- Titre -->
-      <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">
-        Mes <span class="text-[#00FFFF]">Services</span>
-      </h2>
+  <section 
+    id="services" 
+    class="py-20 border-b transition-colors duration-500"
+    :style="{ backgroundColor: 'var(--bg-color)', color: 'var(--text-color)', borderColor: 'var(--border-color)' }"
+  >
+    <div class="container mx-auto px-6 text-center">
+      <!-- Section Title -->
+      <div class="services-title mb-16 opacity-0">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+          Mes <span class="text-[#E8481C]">Services</span>
+        </h2>
+        <p class="max-w-xl mx-auto text-[var(--text-muted)] text-base md:text-lg">
+          Des services d'ingénierie logicielle avancés alliant design d'architecture propre, automatisation intelligente par IA et protocoles de sécurité certifiés.
+        </p>
+        <div class="w-12 h-1 bg-[#E8481C] mx-auto mt-4 rounded-full"></div>
+      </div>
 
-      <!-- Grille des cartes -->
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Carte 1 -->
-        <div
-          class="bg-[#112240] rounded-xl shadow-lg p-6 hover:scale-105 transform transition duration-300 relative"
-          data-aos="fade-up"
-        >
-          <Icon
-            icon="mdi:code-tags"
-            class="text-4xl text-[#00FFFF] mb-4 inline-block"
-          />
-          <h3 class="text-xl font-semibold mb-2">Design UI/UX</h3>
-          <p class="text-sm text-center text-gray-300 mb-6">
-            "Je conçois des interfaces intuitives et esthétiques, en plaçant
-            l'expérience utilisateur au cœur de chaque projet. Mon approche
-            allie ergonomie, design moderne et simplicité pour créer des
-            applications fluides et agréables, répondant aux vrais besoins des
-            utilisateurs."
-          </p>
-          <a
-            href="#contact"
-            class="px-4 py-2 bg-[#00FFFF] text-black font-semibold rounded-full hover:shadow-[0_0_15px_#00FFFF] transition"
-          >
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Service Card 1 -->
+        <div class="service-card bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl p-8 hover:scale-[1.03] transition-all duration-300 flex flex-col justify-between items-start text-left shadow-lg opacity-0">
+          <div>
+            <div class="p-3 bg-[#E8481C]/10 text-[#E8481C] rounded-xl mb-6 inline-block">
+              <Icon icon="mdi:code-tags" class="text-3xl" />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-[var(--text-color)]">Développement Full-Stack</h3>
+            <p class="text-sm text-[var(--text-muted)] leading-relaxed mb-6">
+              Conception d'applications web & mobiles sur-mesure rapides et fluides sur stack technique robuste (Laravel, Vue 3, Python, MySQL). Respect rigoureux des principes SOLID et de la Clean Architecture pour un code pérenne et scalable.
+            </p>
+          </div>
+          <a href="#contact" class="interactive text-[#E8481C] font-semibold text-sm inline-flex items-center gap-1 hover:underline">
             En savoir plus
+            <Icon icon="lucide:arrow-right" class="w-4 h-4" />
           </a>
         </div>
 
-        <!-- Carte 2 -->
-        <div
-          class="bg-[#112240] rounded-xl shadow-lg p-6 hover:scale-105 transform transition duration-300 relative"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <Icon
-            icon="mdi:web"
-            class="text-4xl text-[#00FFFF] mb-4 inline-block"
-          />
-          <h3 class="text-xl font-semibold mb-2">Web Design</h3>
-          <p class="text-sm text-center text-gray-300 mb-6">
-            "Je conçois des sites web modernes et responsives alliant esthétique
-            et performance. Mon objectif est de créer des interfaces claires et
-            engageantes, offrant une expérience fluide tout en répondant aux
-            besoins spécifiques de chaque projet."
-          </p>
-          <a
-            href="#contact"
-            class="px-4 py-2 bg-[#00FFFF] text-black font-semibold rounded-full hover:shadow-[0_0_15px_#00FFFF] transition"
-          >
+        <!-- Service Card 2 -->
+        <div class="service-card bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl p-8 hover:scale-[1.03] transition-all duration-300 flex flex-col justify-between items-start text-left shadow-lg opacity-0">
+          <div>
+            <div class="p-3 bg-[#D4A017]/10 text-[#D4A017] rounded-xl mb-6 inline-block">
+              <Icon icon="lucide:bot" class="text-3xl" />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-[var(--text-color)]">Ingénierie IA & Agents</h3>
+            <p class="text-sm text-[var(--text-muted)] leading-relaxed mb-6">
+              Intégration avancée de grands modèles de langage (LLM) et création d'agents IA autonomes intégrés dans des workflows d'entreprise réels. Expertise MCP (Model Context Protocol), orchestration via n8n et Prompt Engineering.
+            </p>
+          </div>
+          <a href="#contact" class="interactive text-[#D4A017] font-semibold text-sm inline-flex items-center gap-1 hover:underline">
             En savoir plus
+            <Icon icon="lucide:arrow-right" class="w-4 h-4" />
           </a>
         </div>
 
-        <!-- Carte 3 -->
-        <div
-          class="bg-[#112240] rounded-xl shadow-lg p-6 hover:scale-105 transform transition duration-300 relative"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <Icon
-            icon="mdi:apple"
-            class="text-4xl text-[#00FFFF] mb-4 inline-block"
-          />
-          <h3 class="text-xl font-semibold mb-2">Design d'Applications</h3>
-          <p class="text-sm text-center text-gray-300 mb-6">
-            "Je crée des applications mobiles performantes et intuitives, avec
-            un accent sur l'ergonomie et l'expérience utilisateur. Chaque
-            application est pensée pour être fluide, engageante et parfaitement
-            adaptée aux besoins des utilisateurs."
-          </p>
-          <a
-            href="#contact"
-            class="px-4 py-2 bg-[#00FFFF] text-black font-semibold rounded-full hover:shadow-[0_0_15px_#00FFFF] transition"
-          >
+        <!-- Service Card 3 -->
+        <div class="service-card bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl p-8 hover:scale-[1.03] transition-all duration-300 flex flex-col justify-between items-start text-left shadow-lg opacity-0">
+          <div>
+            <div class="p-3 bg-[#E8481C]/10 text-[#E8481C] rounded-xl mb-6 inline-block">
+              <Icon icon="mdi:shield-lock-outline" class="text-3xl" />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-[var(--text-color)]">Sécurité Web & DevOps</h3>
+            <p class="text-sm text-[var(--text-muted)] leading-relaxed mb-6">
+              Sécurisation applicative contre les vulnérabilités de l'OWASP Top 10. Authentification renforcée (JWT, WebAuthn sans mot de passe). Gestion de déploiements conteneurisés sécurisés avec Docker et Kubernetes et automatisation CI/CD.
+            </p>
+          </div>
+          <a href="#contact" class="interactive text-[#E8481C] font-semibold text-sm inline-flex items-center gap-1 hover:underline">
             En savoir plus
+            <Icon icon="lucide:arrow-right" class="w-4 h-4" />
           </a>
         </div>
+
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 import { Icon } from "@iconify/vue";
-</script>
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-<style scoped>
-/* Effet glow autour des cartes */
-.bg-\[\#112240\] {
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-}
-</style>
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  // Title reveal
+  gsap.fromTo(
+    ".services-title",
+    { opacity: 0, y: 30 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: ".services-title",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+
+  // Cards stagger reveal
+  gsap.fromTo(
+    ".service-card",
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".services-title",
+        start: "top 60%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+});
+</script>

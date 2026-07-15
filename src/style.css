@@ -1,21 +1,84 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1; /* Indigo-500 */
-  --color-background: #0b1120; /* Slate-950 */
-  --color-backgroundDark: #020617; /* Slate-950 darker */
-  --color-text: #e5e7eb; /* Gray-200 */
-  --color-textLight: #9ca3af; /* Gray-400 */
-  --color-accent: #22d3ee; /* Cyan-400 */
-  --color-card: #111827; /* Gray-900 */
+  --color-primary: #E8481C;
+  --color-background: var(--bg-color);
+  --color-text: var(--text-color);
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+/* ── Global Theme Variables ── */
+:root {
+  --bg-color: #0E0E0E;
+  --card-bg: #171717;
+  --text-color: #F5F5F0;
+  --text-muted: #A3A3A3;
+  --border-color: #2A2A2A;
+  --accent-dev: #E8481C;
+  --accent-miwa: #D4A017;
+
+  /* CV-specific tokens */
+  --cv-bg: #171717;
+  --cv-card: #1C1C1C;
+  --cv-text: #F5F5F0;
+  --cv-muted: #A3A3A3;
+  --cv-title: #FFFFFF;
+  --cv-border: #2D2D2D;
+  --cv-badge-bg: #222222;
+  --cv-page-bg: #0E0E0E;
 }
 
-/* Optional: Adjust scroll padding to account for fixed header */
+.light-theme {
+  --bg-color: #F5F1E8;
+  --card-bg: #FFFFFF;
+  --text-color: #0E0E0E;
+  --text-muted: #5C5C5C;
+  --border-color: #E0DCD0;
+  --accent-dev: #E8481C;
+  --accent-miwa: #D4A017;
+
+  /* CV-specific tokens — light mode */
+  --cv-bg: #FFFFFF;
+  --cv-card: #F9F8F5;
+  --cv-text: #0E0E0E;
+  --cv-muted: #525252;
+  --cv-title: #0E0E0E;
+  --cv-border: #E5E5E0;
+  --cv-badge-bg: #F0EDE6;
+  --cv-page-bg: #F5F1E8;
+}
+
+
+/* ── Base Body ── */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ── Smooth transitions on all theme-aware elements ── */
+*,
+header, footer, section, article, aside,
+.interactive, button, a, span, p, h1, h2, h3, h4, h5, h6,
+input, textarea, label, div {
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
+/* ── Text readability enforcement ── */
+/* standard body color inheritance is used, allowing color classes to apply correctly */
+
+/* Muted text stays readable in both modes */
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* ── Prevent text clipping on animated elements ── */
+h1, h2, h3 {
+  overflow: visible;
+}
+
+/* ── Scroll Behavior ── */
 html {
   scroll-padding-top: 80px;
 }
@@ -25,7 +88,77 @@ body {
   overflow-x: hidden;
 }
 
+/* ── Fixed elements ── */
 #fixe {
   position: fixed;
   width: 100%;
 }
+
+/* ── Form inputs consistent theming ── */
+input,
+textarea,
+select {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+/* ── Focus ring using accent ── */
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-dev);
+  outline-offset: 0;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dev);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c93d14;
+}
+
+/* ── Sliding Underline Utility ── */
+/* Apply class="link-hover" on any <a> to get the sliding underline effect */
+.link-hover {
+  position: relative;
+  text-decoration: none !important;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
+
+.link-hover:hover::after {
+  width: 100%;
+}
+
+/* Variant with accent color underline */
+.link-hover-accent::after {
+  background-color: #E8481C;
+}
+

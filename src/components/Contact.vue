@@ -1,147 +1,111 @@
 <template>
-  <main
-    id="contact"
-    class="flex flex-col lg:flex-row gap-12 bg-gradient-to-r from-[#0a192f] to-[#112240] py-16 px-4 sm:px-8"
-  >
-    <!-- Contact info -->
-    <aside class="lg:w-2/5" data-aos="fade-up" data-aos-delay="200">
-      <section class="bg-[#112240] rounded-2xl shadow-xl p-8 h-full">
-        <h2 class="text-2xl text-center font-bold text-white mb-6">
-          "Vous avez une idée, un projet ou une collaboration en tête ?  
-          N'hésitez pas à me contacter. Je serai ravi d'échanger avec vous pour  
-          transformer vos idées en solutions numériques concrètes et efficaces."
-        </h2>
+  <main id="contact"
+    class="flex flex-col lg:flex-row gap-12 py-20 px-6 max-w-6xl mx-auto transition-colors duration-500"
+    :style="{ backgroundColor: 'var(--bg-color)', color: 'var(--text-color)' }">
+    <!-- Contact Info Panel -->
+    <aside class="lg:w-2/5 contact-info-panel opacity-0">
+      <section
+        class="bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl shadow-xl p-8 h-full flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-bold mb-6 text-[var(--text-color)] border-l-4 border-[#E8481C] pl-3">
+            Commençons à échanger
+          </h2>
+          <p class="text-sm md:text-base text-[var(--text-muted)] leading-relaxed mb-8">
+            Vous avez une idée, un projet ou une opportunité de collaboration ? N'hésitez pas à m'envoyer un message. Je
+            serais ravi d'échanger avec vous pour concrétiser vos projets numériques.
+          </p>
 
-        <address class="space-y-6">
-          <article
-            v-for="(item, index) in contactItems"
-            :key="index"
-            class="flex items-start"
-          >
-            <figure
-              class="bg-[#112240] hover:bg-[#00FFFF] p-3 rounded-full mr-4 flex-shrink-0"
-            >
-              <Icon :icon="item.icon" class="text-[#00FFFF] text-xl" />
-            </figure>
-            <div>
-              <h3 class="font-semibold text-[#00FFFF]">
-                {{ item.title }}
-              </h3>
-              <div v-html="item.content" class="text-white"></div>
-            </div>
-          </article>
+          <address class="space-y-6 not-italic">
+            <article v-for="(item, index) in contactItems" :key="index" class="flex items-start">
+              <div
+                class="bg-[var(--bg-color)] border border-[var(--border-color)] p-3 rounded-full mr-4 flex-shrink-0 text-[#E8481C]">
+                <Icon :icon="item.icon" class="text-xl" />
+              </div>
+              <div>
+                <h3 class="font-bold text-sm text-[var(--text-color)] uppercase tracking-wider mb-1">
+                  {{ item.title }}
+                </h3>
+                <div v-html="item.content" class="text-sm text-[var(--text-muted)]"></div>
+              </div>
+            </article>
+          </address>
+        </div>
 
-          <nav aria-label="Social media links">
-            <ul class="flex space-x-4">
-              <li v-for="(item, index) in sociallinks" :key="index">
-                <a
-                  :href="item.href"
-                  class="w-10 h-10 rounded-full flex items-center justify-center transition duration-300 bg-white hover:bg-[#00FFFF]"
-                  :aria-label="item.label"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon :icon="item.icon" class="text-[#112240] text-lg" />
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </address>
+        <nav aria-label="Social media links" class="mt-12">
+          <ul class="flex space-x-3">
+            <li v-for="(item, index) in sociallinks" :key="index">
+              <a :href="item.href" target="_blank" rel="noopener noreferrer"
+                class="w-10 h-10 rounded-full border border-[var(--border-color)] bg-[var(--bg-color)] flex items-center justify-center transition-all duration-300 text-[var(--text-muted)] hover:text-white hover:bg-[#E8481C] hover:border-[#E8481C] interactive"
+                :aria-label="item.label">
+                <Icon :icon="item.icon" class="text-lg" />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </section>
     </aside>
 
-    <!-- Contact form -->
-    <section class="lg:w-3/5">
-      <div class="bg-[#112240] rounded-2xl shadow-2xl p-8 h-full">
-        <h2 class="text-3xl font-bold text-white mb-6">
-          Envoyez-nous un <span class="text-cyan-400">message</span>
+    <!-- Contact Form Panel -->
+    <section class="lg:w-3/5 contact-form-panel opacity-0">
+      <div class="bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl shadow-xl p-8 h-full">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-[var(--text-color)] mb-6">
+          Envoyez un <span class="text-[#E8481C]">message</span>
         </h2>
 
-        <!-- ✅ Formspree avec fetch -->
         <form @submit.prevent="handleSubmit" class="space-y-6">
-          <input
-            type="hidden"
-            name="_subject"
-            value="Nouveau message de votre portfolio 🚀"
-          />
+          <input type="hidden" name="_subject" value="Nouveau message de votre portfolio 🚀" />
 
           <fieldset class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label for="First-name" class="block text-white font-medium mb-2">
+              <label for="First-name" class="block font-semibold text-sm mb-2 text-[var(--text-muted)]">
                 Prénom
               </label>
-              <input
-                type="text"
-                id="First-name"
-                v-model="form.first_name"
-                name="first_name"
-                class="w-full px-4 py-4 border border-gray-300 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                placeholder="Votre prénom"
-                required
-              />
+              <input type="text" id="First-name" v-model="form.first_name" name="first_name"
+                class="w-full px-4 py-3.5 bg-[var(--bg-color)] border border-[var(--border-color)] rounded-xl text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[#E8481C] focus:border-transparent transition-all duration-300"
+                placeholder="Votre prénom" required />
             </div>
 
             <div>
-              <label for="Last-name" class="block text-white font-medium mb-2">
+              <label for="Last-name" class="block font-semibold text-sm mb-2 text-[var(--text-muted)]">
                 Nom
               </label>
-              <input
-                type="text"
-                id="Last-name"
-                v-model="form.last_name"
-                name="last_name"
-                class="w-full px-4 py-4 border border-gray-300 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                placeholder="Votre nom"
-                required
-              />
+              <input type="text" id="Last-name" v-model="form.last_name" name="last_name"
+                class="w-full px-4 py-3.5 bg-[var(--bg-color)] border border-[var(--border-color)] rounded-xl text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[#E8481C] focus:border-transparent transition-all duration-300"
+                placeholder="Votre nom" required />
             </div>
           </fieldset>
 
           <div>
-            <label for="email" class="block text-white font-medium mb-2">
+            <label for="email" class="block font-semibold text-sm mb-2 text-[var(--text-muted)]">
               Adresse e-mail
             </label>
-            <input
-              type="email"
-              id="email"
-              v-model="form.email"
-              name="email"
-              class="w-full px-4 py-4 border border-gray-300 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              placeholder="Votre@email.com"
-              required
-            />
+            <input type="email" id="email" v-model="form.email" name="email"
+              class="w-full px-4 py-3.5 bg-[var(--bg-color)] border border-[var(--border-color)] rounded-xl text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[#E8481C] focus:border-transparent transition-all duration-300"
+              placeholder="Votre@email.com" required />
           </div>
 
           <div>
-            <label for="message" class="block text-white font-medium mb-2">
+            <label for="message" class="block font-semibold text-sm mb-2 text-[var(--text-muted)]">
               Votre message
             </label>
-            <textarea
-              id="message"
-              v-model="form.message"
-              name="message"
-              rows="5"
-              placeholder="Votre message"
-              class="w-full px-4 py-4 border border-gray-300 text-white rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              required
-            ></textarea>
+            <textarea id="message" v-model="form.message" name="message" rows="5"
+              placeholder="Écrivez votre message ici..."
+              class="w-full px-4 py-3.5 bg-[var(--bg-color)] border border-[var(--border-color)] rounded-xl text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[#E8481C] focus:border-transparent transition-all duration-300"
+              required></textarea>
           </div>
 
-          <!-- ✅ Messages d'état -->
-          <p v-if="successMessage" class="text-green-400 font-semibold">
+          <!-- Status Messages -->
+          <p v-if="successMessage" class="text-green-400 font-semibold text-sm">
             ✅ {{ successMessage }}
           </p>
-          <p v-if="errorMessage" class="text-red-400 font-semibold">
+          <p v-if="errorMessage" class="text-red-400 font-semibold text-sm">
             ❌ {{ errorMessage }}
           </p>
 
           <div>
-            <button
-              type="submit"
-              class="bg-cyan-400 hover:shadow-[0_0_15px_#00FFFF] text-black px-8 py-3 rounded-full transition shadow-lg w-full md:w-auto"
-              aria-label="soumettre le formulaire de contact"
-              :disabled="loading"
-            >
+            <button type="submit"
+              class="interactive w-full md:w-auto px-8 py-4 rounded-xl font-bold text-white bg-[#E8481C] hover:bg-opacity-95 transition-all duration-300 shadow-md transform active:scale-95 disabled:opacity-50 disabled:pointer-events-none"
+              aria-label="soumettre le formulaire de contact" :disabled="loading">
               <span v-if="!loading">Envoyer le message</span>
               <span v-else>Envoi en cours...</span>
             </button>
@@ -153,10 +117,13 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { Icon } from "@iconify/vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// ✅ Données du formulaire
+gsap.registerPlugin(ScrollTrigger);
+
 const form = ref({
   first_name: "",
   last_name: "",
@@ -168,7 +135,6 @@ const successMessage = ref("");
 const errorMessage = ref("");
 const loading = ref(false);
 
-// ✅ Fonction d'envoi du message à Formspree
 const handleSubmit = async () => {
   successMessage.value = "";
   errorMessage.value = "";
@@ -185,47 +151,29 @@ const handleSubmit = async () => {
       successMessage.value = "Merci ! Votre message a bien été envoyé ✅";
       form.value = { first_name: "", last_name: "", email: "", message: "" };
     } else {
-      errorMessage.value =
-        "Oups, une erreur est survenue. Veuillez réessayer plus tard.";
+      errorMessage.value = "Oups, une erreur est survenue. Veuillez réessayer plus tard.";
     }
   } catch (error) {
-    errorMessage.value = "Erreur réseau. Vérifiez votre connexion.";
+    errorMessage.value = "Erreur réseau. Veuillez vérifier votre connexion.";
   } finally {
     loading.value = false;
   }
 };
 
-// ✅ Informations de contact
 const contactItems = ref([
   {
-    icon: "mdi:phone",
+    icon: "lucide:phone",
     title: "Numéro de téléphone",
-    content: `<p>Tel : <a href="tel:+2290154047392" class="hover:text-cyan-400">+229 01540 47392</a></p>`,
+    content: `<p><a href="tel:+2290154047392" class="link-hover hover:text-[#E8481C] transition-colors">+229 01540 47392</a></p>`,
   },
   {
-    icon: "mdi:email",
+    icon: "lucide:mail",
     title: "Adresse e-mail",
-    content: `<p>Email : <a href="mailto:Edson4lawson@gmail.com" class="hover:text-cyan-400">Edson4lawson@gmail.com</a></p>`,
+    content: `<p><a href="mailto:Edson4lawson@gmail.com" class="link-hover hover:text-[#E8481C] transition-colors">Edson4lawson@gmail.com</a></p>`,
   },
 ]);
 
-// ✅ Réseaux sociaux
 const sociallinks = ref([
-  {
-    icon: "fa-brands:facebook-f",
-    label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61573616845550",
-  },
-  {
-    icon: "fa-brands:twitter",
-    label: "Twitter",
-    href: "https://x.com/edson4lawson?t=jIGYqNROTSTIm8voPS5v1w&s=09",
-  },
-  {
-    icon: "fa-brands:instagram",
-    label: "Instagram",
-    href: "https://www.instagram.com/edson_3183?igsh=NXZuem1lbGloNDRh",
-  },
   {
     icon: "fa-brands:linkedin",
     label: "LinkedIn",
@@ -236,5 +184,47 @@ const sociallinks = ref([
     label: "GitHub",
     href: "https://github.com/Edson4awson",
   },
+  {
+    icon: "fa-brands:facebook-f",
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61573616845550",
+  },
+  {
+    icon: "fa-brands:whatsapp",
+    label: "WhatsApp",
+    href: "https://wa.me/2290154047392",
+  },
 ]);
+
+onMounted(() => {
+  gsap.fromTo(
+    ".contact-info-panel",
+    { opacity: 0, x: -40 },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+
+  gsap.fromTo(
+    ".contact-form-panel",
+    { opacity: 0, x: 40 },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+});
 </script>
