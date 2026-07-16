@@ -13,8 +13,8 @@ const routes = [
     name: "Home",
     component: HomeView,
     meta: {
-      title: "Edson Lawson — Développeur Full-Stack & Fondateur de MiWa | Bénin",
-      description: "Edson Lawson, développeur Full-Stack et ingénieur IA basé au Bénin. Expert Laravel, Vue.js, Flutter et agents IA. Fondateur de MiWa. Disponible pour des projets web, mobile et IA.",
+      title: "Edson Lawson | Développeur Web & Mobile Full-Stack Laravel, Vue.js, Python | Bénin",
+      description: "Edson Lawson, développeur web & mobile full-stack au Bénin. Expert Laravel, Vue.js, Python et IA. Découvrez mon portfolio et mes réalisations innovantes.",
       canonical: `${BASE_URL}/`,
     },
   },
@@ -23,8 +23,8 @@ const routes = [
     name: "CV",
     component: CVView,
     meta: {
-      title: "CV — Edson Lawson | Développeur Full-Stack & Ingénieur IA",
-      description: "Curriculum vitae d'Edson Lawson : compétences Laravel, Vue.js, Flutter, Python, IA. Certifications Anthropic, IBM, Cisco, Microsoft. Projets réalisés au Bénin et en Afrique.",
+      title: "CV | Edson Lawson | Développeur Web & Mobile Full-Stack Laravel, Vue.js, Python | Bénin",
+      description: "CV de Edson Lawson, développeur web & mobile full-stack basé au Bénin. Retrouvez mes compétences en Laravel, Vue.js, Python et mes certifications en IA.",
       canonical: `${BASE_URL}/cv`,
     },
   },
@@ -33,8 +33,8 @@ const routes = [
     name: "Projects",
     component: ProjectsView,
     meta: {
-      title: "Projets — Edson Lawson | Web, Mobile & IA",
-      description: "Découvrez tous les projets d'Edson Lawson : MiWa, Identik, Umap, Glamour Chic, BugOuPas, El Maestro. Applications web, mobiles et entrepreneuriat technologique au Bénin.",
+      title: "Projets | Edson Lawson | Développeur Web & Mobile Full-Stack Laravel, Vue.js, Python | Bénin",
+      description: "Projets d'Edson Lawson, développeur web & mobile full-stack au Bénin. Découvrez mes réalisations avec Laravel, Vue.js, Python et des solutions basées sur l'IA.",
       canonical: `${BASE_URL}/projects`,
     },
   },

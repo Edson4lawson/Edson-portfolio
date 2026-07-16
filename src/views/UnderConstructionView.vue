@@ -1,12 +1,31 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
+import { isLightThemeActive } from "../utils/theme";
 
 const router = useRouter();
+const isDark = ref(true);
+
+const onThemeChange = (e) => {
+  isDark.value = !e.detail.isLight;
+};
+
+onMounted(() => {
+  isDark.value = !isLightThemeActive();
+  window.addEventListener('theme-changed', onThemeChange);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('theme-changed', onThemeChange);
+});
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#0a0a0a] text-white flex flex-col justify-between p-6 relative overflow-hidden font-sans">
+  <div :class="[
+    'min-h-screen flex flex-col justify-between p-6 relative overflow-hidden font-sans transition-colors duration-500',
+    isDark ? 'bg-[#0E0E0E] text-white' : 'bg-[#F5F1E8] text-[#1E1E1E]'
+  ]">
     <!-- Grid background decoration -->
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
     
@@ -60,7 +79,7 @@ const router = useRouter();
           </g>
 
           <!-- Barricades -->
-          <g class="text-white opacity-40 translate-x-[85px] translate-y-[10px]">
+          <g :class="[isDark ? 'text-white' : 'text-[#1E1E1E]', 'opacity-40 translate-x-[85px] translate-y-[10px]']">
             <line x1="0" y1="120" x2="20" y2="120" stroke="currentColor" stroke-width="3" />
             <line x1="5" y1="120" x2="5" y2="110" stroke="currentColor" stroke-width="2" />
             <line x1="15" y1="120" x2="15" y2="110" stroke="currentColor" stroke-width="2" />
@@ -81,7 +100,7 @@ const router = useRouter();
         Projet en <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E8481C] to-[#D4A017]">construction</span>
       </h1>
       
-      <p class="text-gray-400 text-base md:text-lg mb-8 leading-relaxed">
+      <p :class="[isDark ? 'text-gray-400' : 'text-gray-600', 'text-base md:text-lg mb-8 leading-relaxed']">
         Ce projet se structure en coulisses et sera bientôt disponible. 
         Revenez très prochainement pour découvrir la démo complète !
       </p>

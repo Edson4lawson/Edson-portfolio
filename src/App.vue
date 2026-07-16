@@ -35,7 +35,7 @@ const route = useRoute();
 let prevPath = route.path;
 
 // Hide footer on subpages that have their own layout
-const showFooter = computed(() => ![ '/cv', '/projects' ].includes(route.path));
+const showFooter = computed(() => ![ '/cv', '/projects', '/under-construction' ].includes(route.path));
 
 watch(() => route.path, (newPath) => {
   const prevOrder = routeOrder[prevPath] ?? 0;

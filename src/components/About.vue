@@ -86,9 +86,9 @@ onMounted(() => {
         </h4>
 
         <p class="about-paragraph text-base md:text-lg mb-8 leading-relaxed text-[var(--text-muted)] opacity-0">
-          De plus de 2 ans d'expérience, je combine la rigueur de la <strong>Clean
+          De plus de plusieurs annees d'expériences, je combine la rigueur de la <strong>Clean
             Architecture</strong> et des normes de sécurité web strictes avec le potentiel de l'intelligence
-          artificielle pour donner vie à des solutions numériques d'exception.
+          artificielle pour donner vie à des solutions numériques exceptionnelles.
         </p>
 
         <!-- Keypoints List -->

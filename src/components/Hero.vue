@@ -40,15 +40,22 @@ const navigateTo = async (link, e) => {
 
   // If link goes to a hash section
   if (link.sectionId) {
-    // If we're on CV page, navigate to home first, then scroll
+    // If we're on CV or any other page, navigate to home first
     if (route.path !== "/") {
       await router.push("/");
-      // Wait for component mount + next tick
       await nextTick();
-      await new Promise((r) => setTimeout(r, 350)); // let slide transition finish
     }
 
-    const target = document.getElementById(link.sectionId);
+    // Try to get the target element (with polling to support transition completion and mounting)
+    let target = document.getElementById(link.sectionId);
+    if (!target) {
+      for (let i = 0; i < 20; i++) {
+        await new Promise((r) => setTimeout(r, 50));
+        target = document.getElementById(link.sectionId);
+        if (target) break;
+      }
+    }
+
     if (!target) return;
 
     // Use Lenis if available, else native smooth scroll

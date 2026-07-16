@@ -118,9 +118,9 @@
           class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-[#D4A017] filter blur-[120px] opacity-10 pointer-events-none">
         </div>
 
-        <div class="relative z-10 flex flex-col lg:flex-row items-center gap-12">
+        <div class="relative z-10">
           <!-- MiWa Content -->
-          <div class="flex-1">
+          <div>
             <div class="flex items-center gap-3 mb-4">
               <span
                 class="font-mono text-xs uppercase tracking-widest px-3 py-1 bg-[#D4A017]/10 text-[#D4A017] border border-[#D4A017]/20 rounded-full">
@@ -162,13 +162,6 @@
               Découvrir MiWa
               <Icon icon="lucide:arrow-right" class="w-5 h-5" />
             </a>
-          </div>
-
-          <!-- MiWa Image / Mockup visual -->
-          <div
-            class="w-full lg:w-2/5 aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--border-color)] relative bg-[var(--bg-color)]">
-            <img :src="imgMiwa" alt="Plateforme MiWa"
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
           </div>
         </div>
       </div>
@@ -278,6 +271,7 @@ const miwaTech = ref(["Vue.js 3", "Laravel", "Node.js", "Express", "PostgreSQL",
 // Map technologies to icons helper
 const getTechIcon = (tech) => {
   const mapping = {
+    "Vue.js": "vscode-icons:file-type-vue",
     "Vue.js 3": "vscode-icons:file-type-vue",
     "Tailwind CSS": "vscode-icons:file-type-tailwind",
     "GSAP": "logos:greensock-icon",
