@@ -157,11 +157,11 @@
               </span>
             </div>
 
-            <a href="https://miwa.bj" target="_blank" rel="noopener noreferrer"
+            <router-link to="/under-construction"
               class="interactive inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-[#D4A017] hover:bg-opacity-95 transition-all duration-300 shadow-lg">
               Découvrir MiWa
               <Icon icon="lucide:arrow-right" class="w-5 h-5" />
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

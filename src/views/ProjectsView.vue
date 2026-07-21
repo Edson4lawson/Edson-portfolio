@@ -117,7 +117,7 @@ const allProjects = ref([
       "Plateforme de tourisme intelligent connectant la diaspora africaine avec la richesse du patrimoine béninois. Algorithmes de recommandation, guides certifiés, économie circulaire.",
     image: imgMiwa,
     technologies: ["Vue.js 3", "Node.js", "Express", "PostgreSQL", "Google Maps API"],
-    demoLink: "https://miwa.bj",
+    demoLink: "#",
     codeLink: "https://github.com/Edson4lawson/MiWa",
     accentColor: "#D4A017",
   },

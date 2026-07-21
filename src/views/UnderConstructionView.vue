@@ -107,7 +107,7 @@ onUnmounted(() => {
 
       <div class="flex gap-4">
         <button 
-          @click="router.push('/#projects')" 
+          @click="router.push('/projects')" 
           class="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold bg-[#E8481C] text-white hover:bg-opacity-90 shadow-lg shadow-[#E8481C]/25 hover:shadow-[#E8481C]/45 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
         >
           <Icon icon="lucide:arrow-left" class="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1" />
