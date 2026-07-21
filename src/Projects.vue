@@ -173,7 +173,9 @@
         <h4 class="text-lg font-bold mb-2">Collaboration Stratégique</h4>
         <p class="text-sm text-[var(--text-muted)] leading-relaxed max-w-xl mx-auto">
           Partenariat de développement et d'accompagnement technologique réalisé en collaboration avec
-          <strong>Affluo</strong>. Un engagement continu pour assurer des standards élevés d'ingénierie et d'innovation.
+          <strong><a href="https://affluo.vercel.app" target="_blank" rel="noopener noreferrer"
+              class="hover:text-[#E8481C] cursor-pointer">Affluo</a></strong>. Un
+          engagement continu pour assurer des standards élevés d'ingénierie et d'innovation.
         </p>
       </div>
 

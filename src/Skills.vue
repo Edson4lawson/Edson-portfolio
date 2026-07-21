@@ -36,10 +36,10 @@
                 class="w-full h-2.5 rounded-full bg-[var(--card-bg)] border border-[var(--border-color)] overflow-hidden">
                 <div class="progress-bar h-full rounded-full bg-[#E8481C]" :data-percent="skill.percent"
                   style="width: 0%"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
         <!-- Right Column: Specialized Categories -->
         <div class="skills-right opacity-0">
