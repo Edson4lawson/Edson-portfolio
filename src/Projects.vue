@@ -235,8 +235,8 @@ const webProjects = ref([
     description: "Plateforme de restauration complète (site web et application mobile) permettant de consulter le menu, commander en ligne, planifier les livraisons et payer via un système de fidélité et d'avantages clients intégrés.",
     hoverDesc: "Site et application de restauration avec commande, livraison et programme de fidélité.",
     image: imgMaestro,
-    technologies: ["Flutter", "Dart", "Firebase", "Node.js"],
-    demoLink: "#",
+    technologies: ["Vue.js 3", "PHP 8", "Firebase", "MySQL", "Pinia", "TailwindCSS"],
+    demoLink: "https://el-maestro-bj.vercel.app/",
     codeLink: "https://github.com/Edson4lawson/El-Maestro",
   },
   {
@@ -262,7 +262,7 @@ const webProjects = ref([
     description: "Super-application sociale moderne et sécurisée avec authentification JWT, messagerie en temps réel via Firebase, flux social, Reels, assistant IA et backend PHP MVC. Interface glassmorphism animée.",
     hoverDesc: "Réseau social full-stack avec IA, Reels et chat temps réel.",
     image: imgIdentik,
-    technologies: ["Vue.js 3", "PHP 8", "Firebase", "MySQL", "Pinia", "TailwindCSS"],
+    technologies: ["Flutter", "Dart", "Firebase", "Node.js"],
     demoLink: "#",
     codeLink: "https://github.com/Edson4lawson/identik",
   }

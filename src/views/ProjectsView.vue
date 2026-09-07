@@ -52,7 +52,7 @@ const allProjects = ref([
       "Plateforme de restauration complète (site web et application mobile) permettant de consulter le menu, commander en ligne, planifier les livraisons et payer via un système de fidélité et d'avantages clients intégrés.",
     image: imgMaestro,
     technologies: ["Flutter", "Dart", "Firebase", "Node.js"],
-    demoLink: "#",
+    demoLink: "https://el-maestro-bj.vercel.app/",
     codeLink: "https://github.com/Edson4lawson/El-Maestro",
     accentColor: "#E8481C",
   },
