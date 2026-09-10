@@ -27,10 +27,11 @@ Je conçois des applications web et mobiles performantes, sécurisées et esthé
 
 ## Certifications
 
+- Junior Cybersecurity Analyst Career Path — Cisco Networking Academy
+- Introduction à la Cybersécurité — Cisco Networking Academy
 - Introduction au Model Context Protocol (MCP) — Anthropic
 - Claude Code 101 — Anthropic
 - Build an AI Agent — IBM SkillsBuild
-- Introduction à la Cybersécurité — Cisco Networking Academy
 - Développement Web Full-Stack — Microsoft
 
 ## Contact & Liens

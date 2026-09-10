@@ -64,11 +64,9 @@
             <div class="p-3 bg-[#E8481C]/10 text-[#E8481C] rounded-xl mb-6 inline-block">
               <Icon icon="mdi:shield-lock-outline" class="text-3xl" />
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-[var(--text-color)]">Sécurité Web & DevOps</h3>
+            <h3 class="text-2xl font-bold mb-4 text-[var(--text-color)]">Cybersécurité & AppSec</h3>
             <p class="text-sm text-[var(--text-muted)] leading-relaxed mb-6">
-              Sécurisation applicative contre les vulnérabilités de l'OWASP Top 10. Authentification renforcée (JWT,
-              WebAuthn sans mot de passe). Gestion de déploiements conteneurisés sécurisés avec Docker et Kubernetes et
-              automatisation CI/CD.
+              Application du <em>Security by Design</em> : remédiation OWASP Top 10 (XSS, SQLi, CSRF), authentification et sessions sécurisées (JWT, MFA, RBAC), chiffrement HTTPS/TLS, et analyse proactive de logs serveurs et flux réseau.
             </p>
           </div>
           <!-- <a href="#contact" class="interactive text-[#E8481C] font-semibold text-sm inline-flex items-center gap-1 hover:underline">

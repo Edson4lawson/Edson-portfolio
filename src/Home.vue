@@ -15,12 +15,12 @@ const sociallinks = ref([
   {
     icon: "fa-brands:linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/edson-lawson-6b067336a/",
+    href: "https://www.linkedin.com/in/edson-lawson",
   },
   {
     icon: "fa-brands:github",
     label: "GitHub",
-    href: "https://github.com/Edson4awson",
+    href: "https://github.com/Edson4lawson",
   },
   {
     icon: "fa-brands:facebook-f",
@@ -135,7 +135,6 @@ onMounted(() => {
     update() {
       this.x += this.vx;
       this.y += this.vy;
-
       if (this.x < 0 || this.x > width) this.vx *= -1;
       if (this.y < 0 || this.y > height) this.vy *= -1;
     }
@@ -176,24 +175,22 @@ onMounted(() => {
 
     // Draw lines & update particles
     for (let i = 0; i < particles.length; i++) {
-      const p1 = particles[i];
-      p1.update();
-      p1.draw();
+      particles[i].update();
+      particles[i].draw();
 
       for (let j = i + 1; j < particles.length; j++) {
-        const p2 = particles[j];
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 120) {
+        if (dist < 100) {
           ctx.beginPath();
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
           ctx.strokeStyle = isDark.value
-            ? `rgba(220, 220, 220, ${0.12 * (1 - dist / 120)})`
-            : `rgba(40, 40, 40, ${0.08 * (1 - dist / 120)})`;
+            ? `rgba(232, 72, 28, ${0.15 * (1 - dist / 100)})`
+            : `rgba(212, 160, 23, ${0.15 * (1 - dist / 100)})`;
           ctx.lineWidth = 0.5;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
           ctx.stroke();
         }
       }
@@ -349,35 +346,46 @@ onMounted(() => {
           </span>
         </h1>
 
-        <!-- Double Positioning block -->
-        <div class="flex flex-wrap gap-4 mb-8">
+        <!-- Triple Positioning block -->
+        <div class="flex flex-wrap gap-3 mb-8">
           <!-- Développeur Full-Stack badge -->
           <div class="role-box flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-md opacity-0" :class="[
             isDark
               ? 'border-[#E8481C] bg-[#E8481C]/10 text-[#E8481C]'
               : 'border-[#C23510] bg-[#E8481C]/10 text-[#C23510]'
           ]">
-            <Icon icon="lucide:code-2" class="w-5 h-5" />
-            <span class="font-semibold text-sm">Développeur Full-Stack</span>
+            <Icon icon="lucide:code-2" class="w-4 h-4" />
+            <span class="font-semibold text-xs md:text-sm">Développeur Full-Stack</span>
           </div>
 
-          <!-- Fondateur de MiWa badge -->
+          <!-- Cybersécurité & SOC badge -->
+          <div class="role-box flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-md opacity-0" :class="[
+            isDark
+              ? 'border-[#38BDF8] bg-[#38BDF8]/10 text-[#38BDF8]'
+              : 'border-[#0284C7] bg-[#0284C7]/10 text-[#0284C7]'
+          ]">
+            <Icon icon="lucide:shield-check" class="w-4 h-4" />
+            <span class="font-semibold text-xs md:text-sm">Cybersécurité & SOC</span>
+          </div>
+          <br>
+          <!-- Entrepreneur Tech -->
           <div class="role-box flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-md opacity-0" :class="[
             isDark
               ? 'border-[#D4A017] bg-[#D4A017]/10 text-[#D4A017]'
               : 'border-[#8B6914] bg-[#D4A017]/10 text-[#8B6914]'
           ]">
-            <Icon icon="lucide:rocket" class="w-5 h-5" />
-            <span class="font-semibold text-sm">Fondateur de MiWa</span>
+            <Icon icon="lucide:rocket" class="w-4 h-4" />
+            <span class="font-semibold text-xs md:text-sm">Entrepreneur Tech</span>
           </div>
         </div>
 
         <p class="hero-desc text-lg md:text-xl max-w-xl mb-10 leading-relaxed opacity-0"
           :class="isDark ? 'text-gray-300' : 'text-gray-700'">
-          Développeur Web & Mobile Fullstack et fondateur de
-          <span class="font-bold underline" :class="isDark ? 'text-[#D4A017]' : 'text-[#B5850E]'">MiWa</span>. Je donne
-          vie aux idées en alliant design soigné, performance et technologies innovantes, du produit client à ma propre
-          vision entrepreneuriale
+          Développeur Web Full-Stack, certifié en cybersécurité (Cisco) et fondateur de <span
+            class="font-bold underline" :class="isDark ? 'text-[#D4A017]' : 'text-[#B5850E]'">MiWa</span>. J'allie
+          développement moderne, intégration IA et approche <em>Security by Design</em> pour bâtir des applications
+          fiables,
+          performantes et protégées contre les menaces.
         </p>
 
         <!-- CTA Actions -->

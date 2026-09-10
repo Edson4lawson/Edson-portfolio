@@ -79,8 +79,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const technicalSkills = [
-  { name: "Vue.js 3 & JS", percent: 95, icon: "vscode-icons:file-type-vue" },
+  { name: "Vue.js 3 & JavaScript", percent: 95, icon: "vscode-icons:file-type-vue" },
   { name: "Laravel & PHP", percent: 80, icon: "vscode-icons:file-type-php" },
+  { name: "Cybersécurité & SOC (Cisco)", percent: 80, icon: "lucide:shield-check" },
   { name: "Python (IA / Data)", percent: 75, icon: "vscode-icons:file-type-python" },
   { name: "MySQL & BDD", percent: 80, icon: "vscode-icons:file-type-mysql" },
   { name: "Docker & DevOps", percent: 70, icon: "vscode-icons:file-type-docker" }
@@ -93,9 +94,9 @@ const skillCategories = [
     items: ["Agents IA", "MCP (Anthropic)", "Intégration LLM", "n8n", "Prompt Eng."]
   },
   {
-    name: "Sécurité Web",
+    name: "Cybersécurité & SOC",
     icon: "lucide:shield-check",
-    items: ["OWASP Top 10", "JWT", "WebAuthn", "RBAC", "Validation"]
+    items: ["Cisco Junior Analyst", "Security by Design", "Triade CIA", "Analyse Logs & SIEM", "Wireshark & Réseau", "OWASP Top 10", "JWT & MFA"]
   },
   {
     name: "DevOps & Outils",
@@ -103,7 +104,7 @@ const skillCategories = [
     items: ["Docker", "Kubernetes", "CI/CD Actions", "Git Flow", "Vercel"]
   },
   {
-    name: "Concepts Clean",
+    name: "Concepts & Architecture",
     icon: "lucide:layers",
     items: ["Clean Architecture", "SOLID", "Design Patterns", "Agile/Scrum"]
   }

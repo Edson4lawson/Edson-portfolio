@@ -118,12 +118,12 @@ const sociallinks = ref([
   {
     icon: "fa-brands:linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/edson-lawson-6b067336a/",
+    href: "https://www.linkedin.com/in/edson-lawson",
   },
   {
     icon: "fa-brands:github",
     label: "GitHub",
-    href: "https://github.com/Edson4awson",
+    href: "https://github.com/Edson4lawson",
   },
   {
     icon: "fa-brands:facebook-f",

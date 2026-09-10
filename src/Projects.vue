@@ -172,10 +172,12 @@
         <Icon icon="lucide:handshake" class="text-3xl text-[var(--text-muted)] mb-3 mx-auto" />
         <h4 class="text-lg font-bold mb-2">Collaboration Stratégique</h4>
         <p class="text-sm text-[var(--text-muted)] leading-relaxed max-w-xl mx-auto">
-          Partenariat de développement et d'accompagnement technologique réalisé en collaboration avec
-          <strong><a href="https://affluo.vercel.app" target="_blank" rel="noopener noreferrer"
-              class="hover:text-[#E8481C] cursor-pointer">Affluo</a></strong>. Un
-          engagement continu pour assurer des standards élevés d'ingénierie et d'innovation.
+          Partenariat stratégique avec <span class="font-bold underline"
+            :class="isDark ? 'text-[#D4A017]' : 'text-[#B5850E]'"><strong><a href="https://affluo.vercel.app"
+                target="_blank" rel="noopener noreferrer"
+                class="hover:text-[#E8481C] cursor-pointer">Affluo</a></strong></span>
+          , agence de marketing local basée à Cotonou, spécialisée dans la croissance des commerces physiques. Un
+          engagement commun pour connecter ingénierie digitale et acquisition client terrain.
         </p>
       </div>
 
@@ -197,6 +199,7 @@ import imgMaestro from './assets/image4.png';
 import imgGlamour from './assets/image3.png';
 import imgBug from './assets/image6.png';
 import imgIdentik from './assets/image7.png';
+import imgDaba from './assets/image8.png';
 import imgMiwa from './assets/image5.png'; // We use Project5 as MiWa image for showcase
 
 const router = useRouter();
@@ -212,6 +215,15 @@ const navigateDemo = (link) => {
 gsap.registerPlugin(ScrollTrigger);
 
 const webProjects = ref([
+  {
+    title: "DABA Growth Engine",
+    description: "Plateforme de croissance digitale pour DABA SAS, entreprise agroalimentaire togolaise. Conçue lors de l'Akhathon Startup FairPlay, elle centralise les commandes (WhatsApp automatisé via Twilio + n8n), le suivi client, la facturation, et un dashboard admin avec contrôle d'accès RBAC.",
+    hoverDesc: "Plateforme complète de croissance digitale pour l'agroalimentaire au Togo.",
+    image: imgDaba,
+    technologies: ["Vue.js", "Tailwind CSS", "Three.js", "PHP", "MySQL", "Twilio", "n8n"],
+    demoLink: "https://daba-tg.vercel.app",
+    codeLink: "https://github.com/Edson4lawson/Daba",
+  },
   {
     title: "Umap",
     description: "Une plateforme digitale épurée et moderne dédiée au reperage des étudiants de l'Universite d'Abomey-Calavi. Intègre une gestion de catalogue raffinée, un parcours utilisateur extrêmement fluide et des micro-animations immersives qui valorisent la marque.",
@@ -291,8 +303,12 @@ const getTechIcon = (tech) => {
     "Docker": "vscode-icons:file-type-docker",
     "Google Maps API": "mdi:map-marker-outline",
     "PHP 8": "vscode-icons:file-type-php",
+    "PHP": "vscode-icons:file-type-php",
     "Pinia": "logos:pinia",
-    "TailwindCSS": "vscode-icons:file-type-tailwind"
+    "TailwindCSS": "vscode-icons:file-type-tailwind",
+    "Three.js": "logos:threejs",
+    "Twilio": "logos:twilio-icon",
+    "n8n": "simple-icons:n8n"
   };
   return mapping[tech] || "mdi:cog";
 };

@@ -12,6 +12,7 @@ import imgGlamour from "../assets/image3.png";
 import imgBug from "../assets/image6.png";
 import imgMiwa from "../assets/image5.png";
 import imgIdentik from "../assets/image7.png";
+import imgDaba from "../assets/image8.png";
 
 const router = useRouter();
 
@@ -31,6 +32,19 @@ const filters = ["Tous", "Web", "Mobile", "IA & Agents", "Entrepreneuriat"];
 
 const allProjects = ref([
   {
+    title: "DABA Growth Engine",
+    category: "Web",
+    year: "2026",
+    status: "En production",
+    description:
+      "Plateforme de croissance digitale conçue lors de l'Akhathon Startup FairPlay pour DABA SAS (élevage et transformation de volaille, Togo). Commandes automatisées via WhatsApp (Twilio + n8n), dashboard admin RBAC, facturation automatique et sécurisation par clé API + 2FA.",
+    image: imgDaba,
+    technologies: ["Vue.js", "Tailwind CSS", "Three.js", "PHP", "MySQL", "Twilio", "n8n"],
+    demoLink: "https://daba-tg.vercel.app",
+    codeLink: "https://github.com/Edson4lawson/Daba",
+    accentColor: "#E8481C",
+  },
+  {
     title: "Bloom by Chloe",
     category: "Web",
     year: "2025–2026",
@@ -49,9 +63,9 @@ const allProjects = ref([
     year: "2025",
     status: "En production",
     description:
-      "Plateforme de restauration complète (site web et application mobile) permettant de consulter le menu, commander en ligne, planifier les livraisons et payer via un système de fidélité et d'avantages clients intégrés.",
+      "Plateforme de restauration complète (site web et application web) permettant de consulter le menu, commander en ligne, planifier les livraisons et payer via un système de fidélité et d'avantages clients intégrés.",
     image: imgMaestro,
-    technologies: ["Flutter", "Dart", "Firebase", "Node.js"],
+    technologies: ["Vue.js 3", "PHP 8", "Firebase", "MySQL", "Pinia", "TailwindCSS"],
     demoLink: "https://el-maestro-bj.vercel.app/",
     codeLink: "https://github.com/Edson4lawson/El-Maestro",
     accentColor: "#E8481C",
@@ -103,7 +117,7 @@ const allProjects = ref([
     description:
       "Super-application sociale moderne et sécurisée : authentification JWT, messagerie temps réel (Firebase), flux social, Reels, assistant IA et architecture MVC PHP. Interface animée et glassmorphism.",
     image: imgIdentik,
-    technologies: ["Vue.js 3", "PHP 8", "Firebase", "MySQL", "Pinia", "TailwindCSS"],
+    technologies: ["Flutter", "Dart", "Firebase", "Node.js"],
     demoLink: "#",
     codeLink: "https://github.com/Edson4lawson/identik",
     accentColor: "#7c3aed",
@@ -150,6 +164,10 @@ const getTechIcon = (tech) => {
     PostgreSQL: "vscode-icons:file-type-pgsql",
     Docker: "vscode-icons:file-type-docker2",
     "Google Maps API": "mdi:map-marker-outline",
+    PHP: "vscode-icons:file-type-php",
+    "Three.js": "logos:threejs",
+    Twilio: "logos:twilio-icon",
+    n8n: "simple-icons:n8n",
   };
   return mapping[tech] || "mdi:cog";
 };

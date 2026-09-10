@@ -16,12 +16,12 @@ const competencies = ref([
     items: ["Vue 3", "Pinia", "Tailwind CSS", "GSAP", "TresJS", "AOS", "Vite", "Responsive Design"]
   },
   {
-    category: "IA & Agents",
-    items: ["Agents IA", "MCP", "Intégration LLM", "n8n", "Prompt Engineering"]
+    category: "Cybersécurité & SOC",
+    items: ["Cisco Junior Analyst", "Security by Design", "Triade CIA & Défense en profondeur", "Analyse de logs & SIEM", "Surveillance réseau (Wireshark, TCP/IP)", "OWASP Top 10 (XSS, SQLi)", "JWT, MFA & RBAC", "HTTPS & SSL/TLS"]
   },
   {
-    category: "Sécurité",
-    items: ["OWASP Top 10", "reCAPTCHA v3", "RBAC", "Validation des entrées", "Fondamentaux Cybersécurité"]
+    category: "IA & Agents",
+    items: ["Agents IA", "MCP", "Intégration LLM", "n8n", "Prompt Engineering"]
   },
   {
     category: "DevOps & Outils",
@@ -32,17 +32,17 @@ const competencies = ref([
     items: ["MySQL", "Conception BDD", "Optimisation des requêtes"]
   },
   {
-    category: "Concepts",
+    category: "Concepts & Architecture",
     items: ["Clean Architecture", "Design Patterns", "Agile/Scrum", "Intégration API", "i18n"]
   }
 ]);
 
 const certifications = ref([
+  { title: "Junior Cybersecurity Analyst Career Path", organization: "Cisco Networking Academy", icon: "lucide:shield-check" },
+  { title: "Introduction à la Cybersécurité", organization: "Cisco Networking Academy", icon: "lucide:lock" },
   { title: "Introduction au Model Context Protocol (MCP)", organization: "Anthropic", icon: "lucide:cpu" },
   { title: "Claude Code 101", organization: "Anthropic", icon: "lucide:terminal" },
   { title: "Build an AI Agent", organization: "IBM SkillsBuild", icon: "lucide:bot" },
-  { title: "Introduction à la Cybersécurité", organization: "Cisco Networking Academy", icon: "lucide:shield-check" },
-  { title: "Junior Cybersecurity Analyst Career Path", organization: "Cisco Networking Academy", icon: "lucide:lock" },
   { title: "Développement Web Full-Stack", organization: "Microsoft", icon: "lucide:code-2" }
 ]);
 
@@ -134,9 +134,9 @@ onMounted(() => {
               <div class="flex flex-wrap gap-2 text-sm font-semibold text-[#E8481C] dark:text-[#E8481C] mb-4">
                 <span>Développeur Web Full-Stack</span>
                 <span class="text-[var(--cv-border)]">•</span>
-                <span class="text-[#D4A017]">Ingénieur IA Agentique</span>
+                <span class="text-[#38BDF8]">Analyste Cybersécurité (Cisco)</span>
                 <span class="text-[var(--cv-border)]">•</span>
-                <span>Sécurité Web</span>
+                <span class="text-[#D4A017]">Ingénieur IA Agentique</span>
               </div>
             </div>
 
@@ -148,11 +148,11 @@ onMounted(() => {
                 <Icon icon="lucide:mail" class="w-4 h-4 text-[#E8481C]" />
                 Edson4lawson@gmail.com
               </a>
-              <a href="https://edson-lawson.vercel.app" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/edson-lawson" target="_blank" rel="noopener noreferrer"
                 class="interactive link-hover flex items-center gap-2 hover:text-[#E8481C] transition-colors"
-                aria-label="Visiter le site web de Edson Lawson">
-                <Icon icon="lucide:globe" class="w-4 h-4 text-[#E8481C]" />
-                edson-lawson.vercel.app
+                aria-label="Visiter le profil LinkedIn de Edson Lawson">
+                <Icon icon="lucide:linkedin" class="w-4 h-4 text-[#E8481C]" />
+                linkedin.com/in/edson-lawson
               </a>
               <a href="https://github.com/Edson4lawson" target="_blank" rel="noopener noreferrer"
                 class="interactive link-hover flex items-center gap-2 hover:text-[#E8481C] transition-colors"
@@ -175,11 +175,7 @@ onMounted(() => {
             Profil Professionnel
           </h2>
           <p class="text-base leading-relaxed text-[var(--cv-muted)]">
-            Développeur web full-stack avec <strong>plusieurs années d'expérience</strong> dans la conception
-            d'applications de production avec Laravel, Vue 3, Python et MySQL. Approche orientée architecture logicielle
-            propre (Clean Architecture), conception d'API REST, sécurité (JWT, WebAuthn, OWASP) et expérience
-            utilisateur. Ingénieur IA certifié spécialiste MCP — a conçu et déployé des agents IA autonomes intégrés
-            dans des produits réels. Expérimenté avec Docker, Kubernetes, pipelines CI/CD et Git Flow.
+            Développeur web full-stack et analyste cybersécurité certifié Cisco, fort de plusieurs années d'expérience dans la conception d'applications de production sécurisées et performantes (Laravel, Vue 3, Python, MySQL). Application rigoureuse des principes de <strong>Clean Architecture</strong> et de <strong>Security by Design</strong> (triade CIA, protection OWASP, authentification renforcée JWT/MFA, analyse de logs et protocoles réseau). Également certifié spécialiste MCP par Anthropic pour l'orchestration d'agents IA autonomes.
           </p>
         </section>
 

@@ -66,29 +66,42 @@ onMounted(() => {
     :style="{ backgroundColor: 'var(--bg-color)', color: 'var(--text-color)', borderColor: 'var(--border-color)' }">
     <article class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
+      <!-- Mobile Title (visible only on mobile/tablet < lg) -->
+      <div class="w-full lg:hidden text-left mb-2">
+        <h2 class="about-title text-4xl md:text-5xl font-extrabold mb-3 opacity-0">
+          À <span class="text-[#E8481C]">propos</span>
+        </h2>
+        <h4 class="about-subtitle text-xl md:text-2xl font-bold text-[#D4A017] opacity-0">
+          Développeur Full-Stack, Analyste Cybersécurité & Spécialiste IA
+        </h4>
+      </div>
+
       <!-- Graphic/Portrait container -->
       <div class="w-full lg:w-1/2 flex justify-center relative about-image-container opacity-0">
         <div
           class="relative w-full max-w-sm aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-[var(--border-color)]">
           <img src="../assets/apropos.jpg" alt="Edson Lawson"
-            class="w-full h-auto  object-cover hover:scale-105 transition-transform duration-700" width="400"
+            class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" width="400"
             height="900" loading="lazy" />
         </div>
       </div>
 
       <!-- Text content -->
       <div class="w-full lg:w-1/2 text-left">
-        <h2 class="about-title text-4xl md:text-5xl font-extrabold mb-4 opacity-0">
-          À <span class="text-[#E8481C]">propos</span>
-        </h2>
-        <h4 class="about-subtitle text-xl md:text-2xl font-bold pb-4 text-[#D4A017] opacity-0">
-          Développeur Full-Stack & Spécialiste IA
-        </h4>
+        <!-- Desktop Title (hidden on mobile < lg) -->
+        <div class="hidden lg:block">
+          <h2 class="about-title text-4xl md:text-5xl font-extrabold mb-4 opacity-0">
+            À <span class="text-[#E8481C]">propos</span>
+          </h2>
+          <h4 class="about-subtitle text-xl md:text-2xl font-bold pb-4 text-[#D4A017] opacity-0">
+            Développeur Full-Stack, Analyste Cybersécurité & Spécialiste IA </h4>
+        </div>
 
         <p class="about-paragraph text-base md:text-lg mb-8 leading-relaxed text-[var(--text-muted)] opacity-0">
-          De plus de plusieurs annees d'expériences, je combine la rigueur de la <strong>Clean
-            Architecture</strong> et des normes de sécurité web strictes avec le potentiel de l'intelligence
-          artificielle pour donner vie à des solutions numériques exceptionnelles.
+          De plus de 03 ans d'expériences, je combine la rigueur de la <strong>Clean
+            Architecture</strong>, une solide maîtrise en <strong>cybersécurité opérationnelle</strong>
+          et le potentiel de l'intelligence
+          artificielle pour concevoir des solutions logicielles performantes, fiables et hautement sécurisées.
         </p>
 
         <!-- Keypoints List -->
@@ -96,12 +109,13 @@ onMounted(() => {
           <li class="about-keypoint flex items-start gap-3 opacity-0">
             <span class="p-1 rounded bg-[#E8481C]/10 text-[#E8481C] mt-1">✓</span>
             <span class="text-sm md:text-base text-[var(--text-color)]"><strong>Backend & Frontend :</strong> Expertise
-              Laravel, Vue 3, Python et bases de données MySQL optimisées.</span>
+              Laravel, Vue 3, Python et bases de données relationnelles (MySQL) & NoSQL.</span>
           </li>
           <li class="about-keypoint flex items-start gap-3 opacity-0">
             <span class="p-1 rounded bg-[#E8481C]/10 text-[#E8481C] mt-1">✓</span>
-            <span class="text-sm md:text-base text-[var(--text-color)]"><strong>Sécurité Web & DevOps :</strong>
-              Implémentation OWASP Top 10, JWT, WebAuthn et orchestration avec Docker/Kubernetes.</span>
+            <span class="text-sm md:text-base text-[var(--text-color)]"><strong>Cybersécurité & SOC (Cisco) :</strong>
+              . Application du <em>Security by Design</em>, analyse de logs & surveillance réseau (Wireshark/SIEM,
+              Triade CIA).</span>
           </li>
           <li class="about-keypoint flex items-start gap-3 opacity-0">
             <span class="p-1 rounded bg-[#E8481C]/10 text-[#E8481C] mt-1">✓</span>

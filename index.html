@@ -39,106 +39,268 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- ══ Schema.org JSON-LD — Person (pour les IA & moteurs de recherche) ══ -->
+    <!-- ══ Comprehensive Universal Schema.org JSON-LD (@graph) ══ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Edson Lawson",
-      "alternateName": ["Edson4lawson", "Edson Lawson développeur"],
-      "url": "https://edson-lawson.vercel.app/",
-      "image": "https://edson-lawson.vercel.app/og-image.jpg",
-      "jobTitle": "Développeur Full-Stack & Ingénieur IA",
-      "description": "Développeur Full-Stack et ingénieur IA certifié MCP basé au Bénin. Spécialisé en Laravel, Vue.js, Flutter, Python et agents IA. Fondateur de MiWa, plateforme de tourisme intelligent connectant la diaspora africaine au patrimoine béninois.",
-      "nationality": "Béninois",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Cotonou",
-        "addressCountry": "BJ"
-      },
-      "sameAs": [
-        "https://github.com/Edson4lawson",
-        "https://www.linkedin.com/in/edson-lawson-6b067336a/"
-      ],
-      "knowsAbout": [
-        "Développement Web Full-Stack",
-        "Vue.js",
-        "Laravel",
-        "Flutter",
-        "Python",
-        "Intelligence Artificielle",
-        "Agents IA",
-        "Model Context Protocol",
-        "Firebase",
-        "Docker",
-        "MySQL",
-        "Node.js",
-        "Cybersécurité"
-      ],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Développeur Full-Stack",
-        "occupationLocation": {
-          "@type": "Country",
-          "name": "Bénin"
-        }
-      },
-      "founder": {
-        "@type": "Organization",
-        "name": "MiWa",
-        "description": "Plateforme de tourisme intelligent connectant la diaspora africaine avec la richesse du patrimoine béninois.",
-        "url": "https://miwa.bj"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance / Indépendant"
-      }
-    }
-    </script>
-
-    <!-- ══ Schema.org JSON-LD — WebSite (pour la recherche par nom) ══ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Edson Lawson — Portfolio",
-      "url": "https://edson-lawson.vercel.app/",
-      "description": "Portfolio officiel d'Edson Lawson, développeur Full-Stack et ingénieur IA basé au Bénin.",
-      "author": {
-        "@type": "Person",
-        "name": "Edson Lawson"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://edson-lawson.vercel.app/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <!-- ══ Schema.org JSON-LD — BreadcrumbList ══ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://edson-lawson.vercel.app/"
+          "@type": "Person",
+          "@id": "https://edson-lawson.vercel.app/#person",
+          "name": "Lawson Edson Goodwin L.",
+          "alternateName": ["Edson Lawson", "Edson4lawson", "Edson Lawson développeur"],
+          "url": "https://edson-lawson.vercel.app/",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://edson-lawson.vercel.app/og-image.jpg",
+            "caption": "Edson Lawson"
+          },
+          "jobTitle": "Développeur Web Full-Stack, Analyste Cybersécurité & Ingénieur IA",
+          "description": "Développeur Full-Stack, analyste cybersécurité certifié Cisco et ingénieur IA certifié MCP. Spécialiste Laravel, Vue.js, Python, Security by Design, SOC et Clean Architecture. Fondateur de MiWa.",
+          "email": "mailto:Edson4lawson@gmail.com",
+          "telephone": "+2290154047392",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cotonou",
+            "addressCountry": "BJ"
+          },
+          "sameAs": [
+            "https://github.com/Edson4lawson",
+            "https://www.linkedin.com/in/edson-lawson",
+            "https://www.facebook.com/profile.php?id=61573616845550",
+            "https://wa.me/2290154047392"
+          ],
+          "knowsAbout": [
+            "Développement Web Full-Stack",
+            "Cybersécurité & SOC",
+            "Security by Design",
+            "Intelligence Artificielle & Agents IA",
+            "Model Context Protocol (MCP)",
+            "Vue.js 3",
+            "Laravel & PHP",
+            "Python",
+            "Triade CIA & Défense en profondeur",
+            "Analyse de logs & SIEM",
+            "Surveillance réseau & Wireshark",
+            "OWASP Top 10",
+            "Docker & DevOps",
+            "MySQL & Bases de données",
+            "Clean Architecture"
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Junior Cybersecurity Analyst Career Path",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Cisco Networking Academy"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Introduction to Cybersecurity",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Cisco Networking Academy"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Introduction au Model Context Protocol (MCP)",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Anthropic"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Claude Code 101",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Anthropic"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Build an AI Agent",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "IBM SkillsBuild"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Développement Web Full-Stack",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Microsoft"
+              }
+            }
+          ],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Développeur Full-Stack & Analyste Cybersécurité",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "Bénin"
+            },
+            "skills": "Laravel, Vue.js, Python, Security by Design, SOC, SIEM, Agents IA, Docker, Clean Architecture"
+          },
+          "founder": {
+            "@type": "Organization",
+            "name": "MiWa",
+            "url": "https://miwa.bj",
+            "description": "Plateforme de tourisme intelligent connectant la diaspora africaine avec la richesse du patrimoine béninois."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Projets",
-          "item": "https://edson-lawson.vercel.app/projects"
+          "@type": "WebSite",
+          "@id": "https://edson-lawson.vercel.app/#website",
+          "url": "https://edson-lawson.vercel.app/",
+          "name": "Edson Lawson — Portfolio Développeur Full-Stack & Cybersécurité",
+          "description": "Portfolio officiel de Edson Lawson, Développeur Full-Stack, Analyste Cybersécurité et Ingénieur IA.",
+          "publisher": {
+            "@id": "https://edson-lawson.vercel.app/#person"
+          },
+          "inLanguage": "fr-FR"
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "CV",
-          "item": "https://edson-lawson.vercel.app/cv"
+          "@type": "ProfilePage",
+          "@id": "https://edson-lawson.vercel.app/#webpage",
+          "url": "https://edson-lawson.vercel.app/",
+          "name": "Edson Lawson | Développeur Web & Mobile Full-Stack, Cybersécurité & IA | Bénin",
+          "isPartOf": {
+            "@id": "https://edson-lawson.vercel.app/#website"
+          },
+          "about": {
+            "@id": "https://edson-lawson.vercel.app/#person"
+          },
+          "mainEntity": {
+            "@id": "https://edson-lawson.vercel.app/#person"
+          },
+          "description": "Portfolio professionnel d'Edson Lawson présentant ses projets web & mobile, solutions IA et expertises en cybersécurité.",
+          "inLanguage": "fr-FR"
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://edson-lawson.vercel.app/#projects",
+          "name": "Projets Réalisés",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "WebApplication",
+                "name": "DABA Growth Engine",
+                "url": "https://daba-tg.vercel.app",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "All",
+                "description": "Plateforme de croissance digitale et d'automatisation des commandes WhatsApp (Twilio + n8n), dashboard admin RBAC pour DABA SAS.",
+                "creator": {
+                  "@id": "https://edson-lawson.vercel.app/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebApplication",
+                "name": "MiWa",
+                "url": "https://miwa.bj",
+                "applicationCategory": "TravelApplication",
+                "operatingSystem": "All",
+                "description": "Plateforme de tourisme intelligent pour la diaspora africaine et valorisation du patrimoine béninois.",
+                "creator": {
+                  "@id": "https://edson-lawson.vercel.app/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "WebApplication",
+                "name": "El Maestro",
+                "url": "https://el-maestro-bj.vercel.app/",
+                "applicationCategory": "FoodAndDrinkApplication",
+                "operatingSystem": "All",
+                "description": "Plateforme de restauration avec commande en ligne, livraison et système de fidélité.",
+                "creator": {
+                  "@id": "https://edson-lawson.vercel.app/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Glamour Chic",
+                "url": "https://glamourchic.vercel.app/",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "All",
+                "description": "Site haut de gamme et prise de rendez-vous en ligne pour institut de beauté et chirurgie esthétique.",
+                "creator": {
+                  "@id": "https://edson-lawson.vercel.app/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Umap",
+                "url": "https://umap-ten.vercel.app",
+                "applicationCategory": "EducationalApplication",
+                "operatingSystem": "All",
+                "description": "Carte interactive et messagerie éphémère pour les étudiants de l'Université d'Abomey-Calavi.",
+                "creator": {
+                  "@id": "https://edson-lawson.vercel.app/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "WebApplication",
+                "name": "BugOuPas",
+                "url": "https://bug-oupas.vercel.app",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "All",
+                "description": "Plateforme citoyenne collaborative d'analyse des dysfonctionnements digitaux au Bénin.",
+                "creator": {
+                  "@id": "https://edson-lawson.vercel.app/#person"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://edson-lawson.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Accueil",
+              "item": "https://edson-lawson.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projets",
+              "item": "https://edson-lawson.vercel.app/projects"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "CV",
+              "item": "https://edson-lawson.vercel.app/cv"
+            }
+          ]
         }
       ]
     }
