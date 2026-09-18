@@ -239,7 +239,7 @@ const webProjects = ref([
     hoverDesc: "Expérience digitale haut de gamme axée sur la beauté et les soins personnels.",
     image: imgBloom,
     technologies: ["Vue.js", "Tailwind CSS", "GSAP", "Vite"],
-    demoLink: "#",
+    demoLink: "https://bloom-chloe.vercel.app/",
     codeLink: "https://github.com/Edson4lawson/Bloom-chloe",
   },
   {

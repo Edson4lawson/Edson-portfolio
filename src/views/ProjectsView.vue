@@ -53,7 +53,7 @@ const allProjects = ref([
       "Plateforme digitale épurée et moderne dédiée au bien-être et à la cosmétique. Gestion de catalogue raffinée, parcours utilisateur fluide et micro-animations immersives qui valorisent la marque.",
     image: imgBloom,
     technologies: ["Vue.js", "Tailwind CSS", "GSAP", "Vite"],
-    demoLink: "#",
+    demoLink: "https://bloom-chloe.vercel.app/",
     codeLink: "https://github.com/Edson4lawson/Bloom-chloe",
     accentColor: "#E8481C",
   },
